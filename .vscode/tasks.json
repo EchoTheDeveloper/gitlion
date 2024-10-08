@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build app",
+            "type": "shell",
+            "command": "pyinstaller",
+            "args": [
+                "--onefile",
+                "--noconsole",
+                "--distpath",
+                "${workspaceFolder}/bin/dist",
+                "--workpath",
+                "${workspaceFolder}/bin/build",
+                "${workspaceFolder}/src/app.py"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$python"
+            ],
+            "detail": "Generated task to build the app using PyInstaller."
+        }
+    ]
+}
