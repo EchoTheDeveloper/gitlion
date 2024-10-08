@@ -1,6 +1,6 @@
 from repo_manager import *
 from gitlion import *
-from repo import main
+import repo
 import os
 
 def Clone():
@@ -12,7 +12,12 @@ def Init():
     Repo.init()
 
 def Open():
-    print('Hello, World!')
+    root = tk.Tk()
+    root.withdraw()
+    repo_path = filedialog.askdirectory()
+
+    if repo_path:
+        repo.run(repoPath = repoUrl.get())
 
 fontPath = os.path.join('resources', 'fonts', 'monofonto rg.otf')
 fontFamily = 'Monofonto RG'
