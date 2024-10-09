@@ -17,7 +17,7 @@ def Open():
     repo_path = filedialog.askdirectory()
 
     if repo_path:
-        repo.run(repoPath = repoUrl.get())
+        repo.run(repoPath = repoUrl.get(), themeName = Theme)
 
 fontPath = os.path.join('resources', 'fonts', 'monofonto rg.otf')
 fontFamily = 'Monofonto RG'
